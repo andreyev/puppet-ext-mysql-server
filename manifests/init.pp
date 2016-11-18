@@ -35,7 +35,7 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class my_mysql_server {
+class andreyev {
 
   class { '::mysql::server':
     root_password           => 'strongpassword',
