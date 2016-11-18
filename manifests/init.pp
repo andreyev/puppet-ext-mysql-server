@@ -42,4 +42,10 @@ class andreyev {
     remove_default_accounts => true,
     override_options        => $override_options
   }
+
+  cron { 'mysql-dump':
+    command => 'mysqldump -u root -p --opt --all-databases > /root/all-db-$(date +%Y%m%d%H%M%S).sql'
+    user    => 'root',
+    special => 'daily',
+  }
 }
